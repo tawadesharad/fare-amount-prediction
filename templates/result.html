@@ -1,3 +1,5 @@
+{% load static%}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +7,17 @@
         body {
           background-color: rgb(243, 244, 240);
         }
-        
+        body {
+          background-image: url("{%static 'taxi.jpg'%}");
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+               }
+
+
+
+
+
         h1 {
           color: maroon;
           margin-left: 40px;
@@ -29,11 +41,11 @@
 }
 
 .navbar a:hover {
-  background-color: rgb(167, 11, 11);
+  background-color: #970707;
 }
 
 .active {
-  background-color: #04AA6D;
+  background-color: #970707;
 }
 
 @media screen and (max-width: 500px) {
