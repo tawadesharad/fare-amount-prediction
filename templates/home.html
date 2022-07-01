@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+          background-color: rgb(243, 244, 240);
+        }
+        
+        h1 {
+          color: maroon;
+          margin-left: 40px;
+        }
+
+        body {font-family: Arial, Helvetica, sans-serif;}
+
+.navbar {
+  width: 100%;
+  background-color: #970707;
+  overflow: auto;
+}
+
+.navbar a {
+  float: left;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background-color: #970707;
+}
+
+.active {
+  background-color: #970707;
+}
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+</style>
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <div class="navbar">
+      <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
+      <a href="#"><i class="fa fa-fw fa-search"></i> Search</a>
+      <a href="#"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+      <a href="#"><i class="fa fa-fw fa-user"></i> Login</a>
+    </div>
+
+    
+
+ 
+
+
+
+</head>
+<body>
+
+     <center><h1>Passenger Fare Amount Prediction</h1></center> 
+    <form action="{% url 'result' %}">
+    {% csrf_token %}
+
+    
+    <center> <b>Pickup Longitude:</b> <input type="text" required name="pickup_longitude" align="left"> <br> <br></center> 
+    
+
+    <center> <b>Pickup Latitude:</b> <input type="text" required name="pickup_latitude" align="left"> <br> <br></center> 
+
+     <center> <b>Dropoff Longitude:</b> <input type="text" required name="dropoff_longitude"> <br> <br></center>
+      <center> <b>Dropoff Latitude:</b> <input type="text" required name="dropoff_latitude"> <br> <br></center>
+       <center> <b>Passenger Count:</b> <input type="text" required name="passenger_count"> <br> <br></center>
+     <center> <b>Date:</b> <input type="text" required name="day"> <br> <br></center>
+   <center> <b>Month:</b> <input type="text" required name="month"> <br> <br></center>
+   <center>  <b>Year:</b>  <input type="text" required name="year"> <br> <br></center>
+    <center>   <b>Hour:</b>  <input type="text" required name="hour"> <br> <br></center>
+    <center> <b>Distance:</b>    <input type="text" required name="distance"> <br> <br></center>
+
+
+
+    
+   <center> <input style="background-color: rgb(249, 245, 245); color: maroon; height:50px; width:200px; font-size:larger; " type="submit" name="" value="submit" ></center> 
+
+</body>
+</html>
