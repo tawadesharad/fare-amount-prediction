@@ -3,7 +3,6 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from django.http import HttpResponse
 import joblib
-import xgboost as xgb
 import sklearn.model_selection
 import pickle
 # Create your views here.
